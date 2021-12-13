@@ -1,0 +1,22 @@
+Lieu(id, rueEtNuméro VARCHAR(50), capacité SMALLINT)
+	R Localité NN
+
+LieuPublic(nom)
+	R Lieu K
+
+LieuPrivé()
+	R Lieu K
+
+Localité(codePostal SMALLSERIAL, nom VARCHAR(50))
+
+Localité_Personne()
+	PP
+
+Personne(id, nom VARCHAR(50), prénom VARCHAR(50), dateNaissance DATE, genre CHAR(1), numTéléphone VARCHAR(20), adresseMail VARCHAR(50))
+	R LieuPrivé UN NN
+
+Tuteur(texteDePrésentation VARCHAR(500))
+	R Personne K
+
+PlagesDeDisponibilité(dateEtHeureDébut DATE K, durée SMALLINT K)
+	R Tuteur K
