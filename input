@@ -13,7 +13,7 @@ Localité_Personne()
 	PP
 
 Personne(id, nom VARCHAR(50), prénom VARCHAR(50), dateNaissance DATE, genre CHAR(1), numTéléphone VARCHAR(20), adresseMail VARCHAR(50))
-	R LieuPrivé UN NN
+	R LieuPrivé U NN
 
 Tuteur(texteDePrésentation VARCHAR(500))
 	R Personne K
